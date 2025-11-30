@@ -1,24 +1,42 @@
-import React from "react";
-import { NavLink, Outlet } from "react-router";
-import Header from "../component/Admin/Header";
-import Sidebar from "../component/Admin/Sidebar";
+import React, { useState } from "react";
+import Sidebar from "../component/admin/Sidebar";
+import Header from "../component/admin/Header";
+import { Outlet } from "react-router";
 
-const Admin = () => {
+function Layout({ children }) {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
   return (
-    <div>
-      <div className="grid grid-cols-12">
-        <div className="col-span-3">
-          <Sidebar />
+    <div className="flex">
+      {/* SIDEBAR */}
+      <div>
+        {/* Overlay for mobile */}
+        {sidebarOpen && (
+          <div
+            className="fixed inset-0 bg-black/50 z-40 lg:hidden"
+            onClick={() => setSidebarOpen(false)}
+          />
+        )}
+        <Sidebar
+          isOpen={sidebarOpen}
+          toggleSidebar={() => setSidebarOpen(!sidebarOpen)}
+        />
+      </div>
+
+      {/* RIGHT SIDE (Header + Content) */}
+      <div className="flex-1 min-h-screen lg:ml-64">
+        {/* HEADER */}
+        <Header toggleSidebar={() => setSidebarOpen(!sidebarOpen)} />
+        <div>
+          <Outlet />
         </div>
-        <div className="col-span-9">
-          <Header />
-          <div>
-            <Outlet />
-          </div>
+        {/* MAIN CONTENT */}
+        <div className="pt-20 p-5 bg-gray-50 dark:bg-slate-900 min-h-screen">
+          {children}
         </div>
       </div>
     </div>
   );
-};
+}
 
-export default Admin;
+export default Layout;

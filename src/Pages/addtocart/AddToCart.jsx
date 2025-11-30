@@ -75,7 +75,7 @@ export default function Cart() {
               >
                 {/* Image */}
                 <img
-                  src={product.images}
+                  src={product.image}
                   alt={product.name}
                   className="w-24 h-24 object-cover rounded-lg"
                 />

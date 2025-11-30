@@ -5,7 +5,7 @@ function Users() {
     name: "",
     price: "",
     description: "",
-    image: "",
+    images: "",
     categoryId: "",
     inStock: true,
   });
@@ -30,7 +30,7 @@ function Users() {
           categoryId: "",
           price: "",
           description: "",
-          image: "",
+          images: "",
           inStock: true,
           name: "",
         });
@@ -44,7 +44,7 @@ function Users() {
   };
 
   return (
-    <div className="max-w-xl mx-auto mt-10 bg-white shadow-lg p-6 rounded-lg">
+    <div className="max-w-xl mx-auto mt-20 bg-white shadow-lg p-6 rounded-lg">
       <h2 className="text-2xl font-bold mb-5 text-center">Add New Product</h2>
 
       <form onSubmit={handleSubmit} className="space-y-4">
@@ -55,6 +55,7 @@ function Users() {
             name="name"
             className="w-full border p-2 rounded"
             placeholder="Sample Product"
+            value={product.name}
             onChange={handleChange}
           />
         </div>
@@ -66,6 +67,7 @@ function Users() {
             name="price"
             className="w-full border p-2 rounded"
             placeholder="1999"
+            value={product.price}
             onChange={handleChange}
           />
         </div>
@@ -77,6 +79,7 @@ function Users() {
             className="w-full border p-2 rounded"
             rows="3"
             placeholder="Nice thing."
+            value={product.description}
             onChange={handleChange}
           ></textarea>
         </div>
@@ -88,6 +91,7 @@ function Users() {
             name="image"
             className="w-full border p-2 rounded"
             placeholder="/images/sample.jpg"
+            value={product.images}
             onChange={handleChange}
           />
         </div>
@@ -99,6 +103,7 @@ function Users() {
             name="categoryId"
             className="w-full border p-2 rounded"
             placeholder="1"
+            value={product.categoryId}
             onChange={handleChange}
           />
         </div>

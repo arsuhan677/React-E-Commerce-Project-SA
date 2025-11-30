@@ -57,7 +57,7 @@ const ShopbyCategories = () => {
 
         <p className="font-bold text-blue-900">View all</p>
       </div>
-      <div className="gap-3 sm:gap-6 grid grid-cols-2 sm:grid-cols-9 sm:mt-16 mt-12">
+      <div className="gap-3 sm:gap-6 grid grid-cols-3 sm:grid-cols-9 sm:mt-16 mt-12">
         {Products.map((product) => (
           <div className="xs:h-100 h-35 w-32">
             <img

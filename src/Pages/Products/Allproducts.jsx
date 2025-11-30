@@ -22,73 +22,73 @@ function Allproducts() {
       id: 1,
       name: "Winter Jacket",
       price: "25000",
-      images: "./public/images1/1.avif",
+      image: "./public/images1/1.avif",
     },
     {
       id: 2,
       name: "KeyBoard",
       price: "25000",
-      images: "./public/images1/2.avif",
+      image: "./public/images1/2.avif",
     },
     {
       id: 3,
       name: "T-Shirt",
       price: "25000",
-      images: "./public/images1/3.avif",
+      image: "./public/images1/3.avif",
     },
     {
       id: 4,
       name: "Leptop HP",
       price: "25000",
-      images: "./public/images1/4.avif",
+      image: "./public/images1/4.avif",
     },
     {
       id: 5,
       name: "T-Shirt",
       price: "25000",
-      images: "./public/images1/5.avif",
+      image: "./public/images1/5.avif",
     },
     {
       id: 6,
       name: "Winter Jacket",
       price: "25000",
-      images: "./public/images1/6.avif",
+      image: "./public/images1/6.avif",
     },
     {
       id: 7,
       name: "T-Shirt",
       price: "25000",
-      images: "./public/images1/7.avif",
+      image: "./public/images1/7.avif",
     },
     {
       id: 8,
       name: "Winter Jacket",
       price: "25000",
-      images: "./public/images1/8.avif",
+      image: "./public/images1/8.avif",
     },
     {
       id: 9,
       name: "T-Shirt",
       price: "25000",
-      images: "./public/images1/10.avif",
+      image: "./public/images1/10.avif",
     },
     {
       id: 10,
       name: "Winter Jacket",
       price: "25000",
-      images: "./public/images1/9.avif",
+      image: "./public/images1/9.avif",
     },
     {
       id: 11,
       name: "Winter Jacket",
+      image: "./public/images1/1.avif",
       price: "25000",
-      images: "./public/images1/1.avif",
     },
     {
       id: 12,
       name: "KeyBoard",
       price: "25000",
-      images: "./public/images1/2.avif",
+      image: "./public/images1/2.avif",
     },
   ];
 
@@ -106,7 +106,7 @@ function Allproducts() {
           >
             <img
               className="w-full h-40 sm:h-50 rounded-lg"
-              src={product.images}
+              src={product.image}
               alt={product.name}
             />
             <div className="p-4">

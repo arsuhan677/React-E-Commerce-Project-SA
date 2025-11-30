@@ -33,20 +33,21 @@ const Products = () => {
         <div className="mb-6 font-medium flex flex-col space-y-2">
           <span>Search</span>
           <div className="mb-8">
-            <input value={query}
-          onChange={(e) => setQuery(e.target.value)}
-           className="border w-full border-gray-300 focus: rounded-lg py-2.5 px-6" type="text" placeholder="filter products............" />
+            <input
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              className="border w-full border-gray-300 focus: rounded-lg py-2.5 px-6"
+              type="text"
+              placeholder="filter products............"
+            />
           </div>
-        <div className="mb-4">
-          <AboutCategories />
+          <div className="mb-4">
+            <AboutCategories />
+          </div>
         </div>
-        </div>
-
       </div>
       <div className="col-span-9 p-6">
-        
         <Allproducts />
-
       </div>
       <main>
         <Outlet />
