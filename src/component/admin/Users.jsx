@@ -90,7 +90,7 @@ function Users() {
             type="text"
             name="image"
             className="w-full border p-2 rounded"
-            placeholder="/images/sample.jpg"
+            placeholder="images url......"
             value={product.images}
             onChange={handleChange}
           />

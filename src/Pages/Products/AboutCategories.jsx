@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router";   // ⬅ Link import করতে হবে
+import { Link } from "react-router";
 
 const AboutCategories = () => {
   const [activeCategory, setActiveCategory] = useState("All Categories");
@@ -13,18 +13,27 @@ const AboutCategories = () => {
   ];
 
   return (
-    <div className="w-full max-w-xs bg-white rounded-lg">
+    <div className="w-full bg-white rounded-lg">
       <h2 className="text-gray-600 font-semibold mb-3">Category</h2>
 
-      <div className="flex flex-col gap-2">
+      {/* containeer */}
+      <div className="
+        flex gap-3 
+        overflow-x-auto 
+        whitespace-nowrap 
+        sm:overflow-visible sm:flex-wrap
+        scrollbar-hide
+        py-1
+      ">
         {categories.map((cat) => (
           <Link
             key={cat.name}
             to={cat.path}
             onClick={() => setActiveCategory(cat.name)}
-            className={`block                     // ⬅ button নয়, Link হবে
-              text-left px-4 py-2 rounded-lg font-medium
+            className={`
+              px-4 py-2 rounded-lg font-medium
               transition-all duration-200
+              text-sm sm:text-base
               ${
                 activeCategory === cat.name
                   ? "bg-blue-100 text-blue-700"
