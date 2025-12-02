@@ -50,7 +50,6 @@ export default function Cart() {
   return (
     <div className="bg-gray-50 min-h-screen">
       <div className="p-4 sm:p-6 container mx-auto flex flex-col lg:flex-row gap-6">
-        {/* Cart Items */}
         <div className="flex-1 space-y-4 lg:space-y-6 bg-white rounded-lg shadow-lg p-4 sm:p-6">
           <h2 className="text-2xl font-bold mb-4 sm:mb-6">Your Cart</h2>
 
@@ -62,14 +61,12 @@ export default function Cart() {
                 key={index}
                 className="flex flex-col sm:flex-row items-start sm:items-center justify-between rounded p-3 sm:p-4 gap-4 sm:gap-6 border-b"
               >
-                {/* Image */}
                 <img
                   src={product.image}
                   alt={product.name}
                   className="w-full sm:w-28 h-28 sm:h-28 object-cover rounded-lg"
                 />
 
-                {/* Product Info */}
                 <div className="flex-1">
                   <h3 className="font-semibold text-lg">{product.name}</h3>
                   {product.description && (
@@ -79,7 +76,6 @@ export default function Cart() {
                   )}
                 </div>
 
-                {/* Price & Delete */}
                 <div className="flex flex-col items-start sm:items-end gap-2 mt-2 sm:mt-0">
                   <p className="text-black font-semibold">
                     ৳ {product.price * product.quantity}
@@ -92,7 +88,6 @@ export default function Cart() {
                   </button>
                 </div>
 
-                {/* Quantity */}
                 <div className="flex items-center gap-2 mt-2 sm:mt-0">
                   <button
                     onClick={() => updateQuantity(index, "decrement")}

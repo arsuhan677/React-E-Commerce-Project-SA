@@ -44,11 +44,12 @@ function Users() {
   };
 
   return (
-    <div className="max-w-xl mx-auto mt-20 bg-white shadow-lg p-6 rounded-lg">
+    <div className="">
+      <div className="mx-auto mt-20 h-1 bg-gray-50 shadow-lg p-12 rounded-lg">
       <h2 className="text-2xl font-bold mb-5 text-center">Add New Product</h2>
 
       <form onSubmit={handleSubmit} className="space-y-4">
-        <div>
+        <div className="">
           <label className="block font-medium mb-1">Product Name</label>
           <input
             type="text"
@@ -127,6 +128,7 @@ function Users() {
           Add Product
         </button>
       </form>
+    </div>
     </div>
   );
 }
