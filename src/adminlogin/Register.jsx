@@ -18,7 +18,7 @@ const Register = () => {
     const { data, error } = await supabase.auth.signUp({
       email: email,
       password: password,
-      options: { emailRedirectTo: "http://localhost:5174/" },
+      options: { emailRedirectTo: "https://react-e-commerce-project-sa.vercel.app/" },
     });
     if (error) {
       alert(error.message);
